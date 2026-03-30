@@ -71,6 +71,48 @@
     .store-list-item .type { font-size: 0.8rem; color: #888; }
     .store-list-item .count { font-size: 0.8rem; color: #e94560; margin-top: 2px; }
     .store-list-item .free-tag { color: #2ecc71; font-weight: 600; }
+
+    .item-search {
+      margin-bottom: 24px;
+      position: relative;
+    }
+    .item-search input {
+      width: 100%;
+      padding: 12px 18px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .item-search input:focus { border-color: #e94560; }
+    .search-results {
+      margin-bottom: 30px;
+    }
+    .search-results .search-store-group {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      padding: 20px 24px;
+      margin-bottom: 16px;
+    }
+    .search-store-group .store-group-header {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .search-store-group .store-group-type {
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 14px;
+    }
+    .no-results {
+      text-align: center;
+      color: #888;
+      padding: 40px 20px;
+      font-size: 1rem;
+    }
+
     .carousel-wrapper { position: relative; margin-bottom: 30px; }
     .carousel {
       display: flex;
@@ -103,7 +145,11 @@
       display: flex;
       flex-direction: column;
       gap: 6px;
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.2s;
     }
+    .sale-item:hover { background: #f8f8f8; }
     .sale-item .item-name { font-size: 0.95rem; font-weight: 600; }
     .sale-item .prices { display: flex; align-items: center; gap: 8px; }
     .sale-item .original {
@@ -123,6 +169,11 @@
       padding: 2px 6px;
       border-radius: 4px;
       align-self: flex-start;
+    }
+    .sale-item .store-label {
+      font-size: 0.75rem;
+      color: #888;
+      margin-top: 2px;
     }
     .carousel-nav {
       display: flex;
@@ -145,7 +196,7 @@
       color: #1a1a2e;
     }
     .carousel-btn:hover { background: #1a1a2e; color: #fff; }
-    .carousel-dots { display: flex; gap: 8px; }
+    .carousel-dots { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
     .dot {
       width: 10px;
       height: 10px;
@@ -163,6 +214,7 @@
       padding: 4px 14px;
       border-radius: 4px;
       margin-bottom: 12px;
+      text-decoration: none;
     }
     .pantry-note { font-size: 0.9rem; color: #666; margin-bottom: 18px; }
     .hours-grid { max-width: 400px; }
@@ -193,377 +245,139 @@
   </header>
   <div class="container">
     <div class="zip-header">
-      <h2>Sales Overview - Zip Code 47906</h2>
-      <p>West Lafayette, IN | March 2026</p>
+      <h2 id="zip-title">Sales Overview</h2>
+      <p id="zip-subtitle"></p>
     </div>
     <div class="active-stores">
       <span class="label">Active Stores with Sales</span>
-      <span class="value">6</span>
+      <span class="value" id="store-count">0</span>
     </div>
-    <h3 class="section-title">Stores</h3>
-    <div class="store-list">
-      <div class="store-list-item selected" onclick="goToSlide(0)">
-        <div class="name">Payless Super Market</div>
-        <div class="type">Grocery</div>
-        <div class="count">6 items on sale</div>
-      </div>
-      <div class="store-list-item" onclick="goToSlide(1)">
-        <div class="name">Target</div>
-        <div class="type">General Retail</div>
-        <div class="count">6 items on sale</div>
-      </div>
-      <div class="store-list-item" onclick="goToSlide(2)">
-        <div class="name">CVS Pharmacy</div>
-        <div class="type">Pharmacy</div>
-        <div class="count">6 items on sale</div>
-      </div>
-      <div class="store-list-item" onclick="goToSlide(3)">
-        <div class="name">Best Buy</div>
-        <div class="type">Electronics</div>
-        <div class="count">6 items on sale</div>
-      </div>
-      <div class="store-list-item" onclick="goToSlide(4)">
-        <div class="name">Dollar General</div>
-        <div class="type">General Retail</div>
-        <div class="count">6 items on sale</div>
-      </div>
-      <div class="store-list-item" onclick="goToSlide(5)">
-        <div class="name">ACE Food Pantry</div>
-        <div class="type">Free Resource</div>
-        <div class="count free-tag">Free - See hours</div>
-      </div>
+
+    <h3 class="section-title">Search Items</h3>
+    <div class="item-search">
+      <input type="text" id="item-search-input" placeholder="Search for an item (e.g. milk, shampoo, earbuds...)">
     </div>
-    <h3 class="section-title">Items on Sale</h3>
-    <div class="carousel-wrapper">
-      <div class="carousel" id="carousel">
-        <div class="store-slide">
-          <div class="store-name">Payless Super Market</div>
-          <div class="store-type">Grocery</div>
-          <div class="sale-items">
-            <div class="sale-item">
-              <span class="discount">-30%</span>
-              <span class="item-name">Whole Milk (1 gal)</span>
-              <div class="prices">
-                <span class="original">$4.29</span>
-                <span class="sale-price">$2.99</span>
-              </div>
-            </div>
-            <div class="sale-item">
-              <span class="discount">-25%</span>
-              <span class="item-name">Chicken Breast (lb)</span>
-              <div class="prices">
-                <span class="original">$5.99</span>
-                <span class="sale-price">$4.49</span>
-              </div>
-            </div>
-            <div class="sale-item">
-              <span class="discount">-40%</span>
-              <span class="item-name">Strawberries (1 lb)</span>
-              <div class="prices">
-                <span class="original">$4.99</span>
-                <span class="sale-price">$2.99</span>
-              </div>
-            </div>
-            <div class="sale-item">
-              <span class="discount">-20%</span>
-              <span class="item-name">Sourdough Bread</span>
-              <div class="prices">
-                <span class="original">$3.49</span>
-                <span class="sale-price">$2.79</span>
-              </div>
-            </div>
-            <div class="sale-item">
-              <span class="discount">-50%</span>
-              <span class="item-name">Greek Yogurt (6pk)</span>
-              <div class="prices">
-                <span class="original">$7.99</span>
-                <span class="sale-price">$3.99</span>
-              </div>
-            </div>
-            <div class="sale-item">
-              <span class="discount">-15%</span>
-              <span class="item-name">Orange Juice (64oz)</span>
-              <div class="prices">
-                <span class="original">$4.69</span>
-                <span class="sale-price">$3.99</span>
-              </div>
-            </div>
-          </div>
+    <div class="search-results" id="search-results" style="display: none;"></div>
+
+    <div id="browse-section">
+      <h3 class="section-title">Stores</h3>
+      <div class="store-list" id="store-list"></div>
+      <h3 class="section-title">Items on Sale</h3>
+      <div class="carousel-wrapper">
+        <div class="carousel" id="carousel"></div>
+        <div class="carousel-nav">
+          <button class="carousel-btn" onclick="moveSlide(-1)">&#8592;</button>
+          <div class="carousel-dots" id="dots"></div>
+          <button class="carousel-btn" onclick="moveSlide(1)">&#8594;</button>
         </div>
-        <div class="store-slide">
-          <div class="store-name">Target</div>
-          <div class="store-type">General Retail</div>
-          <div class="sale-items">
-            <div class="sale-item">
-              <span class="discount">-35%</span>
-              <span class="item-name">Bath Towel Set (4pk)</span>
-              <div class="prices">
-                <span class="original">$29.99</span>
-                <span class="sale-price">$19.49</span>
-              </div>
-            </div>
-            <div class="sale-item">
-              <span class="discount">-20%</span>
-              <span class="item-name">Desk Lamp</span>
-              <div class="prices">
-                <span class="original">$24.99</span>
-                <span class="sale-price">$19.99</span>
-              </div>
-            </div>
-            <div class="sale-item">
-              <span class="discount">-40%</span>
-              <span class="item-name">Throw Blanket</span>
-              <div class="prices">
-                <span class="original">$19.99</span>
-                <span class="sale-price">$11.99</span>
-              </div>
-            </div>
-            <div class="sale-item">
-              <span class="discount">-25%</span>
-              <span class="item-name">Candle Set (3pk)</span>
-              <div class="prices">
-                <span class="original">$14.99</span>
-                <span class="sale-price">$11.24</span>
-              </div>
-            </div>
-            <div class="sale-item">
-              <span class="discount">-30%</span>
-              <span class="item-name">Storage Bins (set)</span>
-              <div class="prices">
-                <span class="original">$22.99</span>
-                <span class="sale-price">$15.99</span>
-              </div>
-            </div>
-            <div class="sale-item">
-              <span class="discount">-15%</span>
-              <span class="item-name">Phone Charger Cable</span>
-              <div class="prices">
-                <span class="original">$12.99</span>
-                <span class="sale-price">$10.99</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="store-slide">
-          <div class="store-name">CVS Pharmacy</div>
-          <div class="store-type">Pharmacy</div>
-          <div class="sale-items">
-            <div class="sale-item">
-              <span class="discount">-40%</span>
-              <span class="item-name">Vitamin D (200ct)</span>
-              <div class="prices">
-                <span class="original">$12.99</span>
-                <span class="sale-price">$7.79</span>
-              </div>
-            </div>
-            <div class="sale-item">
-              <span class="discount">-30%</span>
-              <span class="item-name">Shampoo (12oz)</span>
-              <div class="prices">
-                <span class="original">$8.49</span>
-                <span class="sale-price">$5.94</span>
-              </div>
-            </div>
-            <div class="sale-item">
-              <span class="discount">-25%</span>
-              <span class="item-name">Sunscreen SPF 50</span>
-              <div class="prices">
-                <span class="original">$10.99</span>
-                <span class="sale-price">$8.24</span>
-              </div>
-            </div>
-            <div class="sale-item">
-              <span class="discount">-50%</span>
-              <span class="item-name">Bandages (100ct)</span>
-              <div class="prices">
-                <span class="original">$6.99</span>
-                <span class="sale-price">$3.49</span>
-              </div>
-            </div>
-            <div class="sale-item">
-              <span class="discount">-20%</span>
-              <span class="item-name">Toothpaste (2pk)</span>
-              <div class="prices">
-                <span class="original">$7.49</span>
-                <span class="sale-price">$5.99</span>
-              </div>
-            </div>
-            <div class="sale-item">
-              <span class="discount">-35%</span>
-              <span class="item-name">Hand Soap (3pk)</span>
-              <div class="prices">
-                <span class="original">$9.99</span>
-                <span class="sale-price">$6.49</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="store-slide">
-          <div class="store-name">Best Buy</div>
-          <div class="store-type">Electronics</div>
-          <div class="sale-items">
-            <div class="sale-item">
-              <span class="discount">-20%</span>
-              <span class="item-name">Wireless Earbuds</span>
-              <div class="prices">
-                <span class="original">$79.99</span>
-                <span class="sale-price">$63.99</span>
-              </div>
-            </div>
-            <div class="sale-item">
-              <span class="discount">-15%</span>
-              <span class="item-name">USB-C Hub</span>
-              <div class="prices">
-                <span class="original">$34.99</span>
-                <span class="sale-price">$29.74</span>
-              </div>
-            </div>
-            <div class="sale-item">
-              <span class="discount">-30%</span>
-              <span class="item-name">Bluetooth Speaker</span>
-              <div class="prices">
-                <span class="original">$49.99</span>
-                <span class="sale-price">$34.99</span>
-              </div>
-            </div>
-            <div class="sale-item">
-              <span class="discount">-25%</span>
-              <span class="item-name">Webcam 1080p</span>
-              <div class="prices">
-                <span class="original">$59.99</span>
-                <span class="sale-price">$44.99</span>
-              </div>
-            </div>
-            <div class="sale-item">
-              <span class="discount">-40%</span>
-              <span class="item-name">HDMI Cable (6ft)</span>
-              <div class="prices">
-                <span class="original">$14.99</span>
-                <span class="sale-price">$8.99</span>
-              </div>
-            </div>
-            <div class="sale-item">
-              <span class="discount">-10%</span>
-              <span class="item-name">Keyboard (Wireless)</span>
-              <div class="prices">
-                <span class="original">$44.99</span>
-                <span class="sale-price">$40.49</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="store-slide">
-          <div class="store-name">Dollar General</div>
-          <div class="store-type">General Retail</div>
-          <div class="sale-items">
-            <div class="sale-item">
-              <span class="discount">-50%</span>
-              <span class="item-name">Paper Towels (6pk)</span>
-              <div class="prices">
-                <span class="original">$5.99</span>
-                <span class="sale-price">$2.99</span>
-              </div>
-            </div>
-            <div class="sale-item">
-              <span class="discount">-30%</span>
-              <span class="item-name">Dish Soap (28oz)</span>
-              <div class="prices">
-                <span class="original">$2.99</span>
-                <span class="sale-price">$2.09</span>
-              </div>
-            </div>
-            <div class="sale-item">
-              <span class="discount">-25%</span>
-              <span class="item-name">AA Batteries (8pk)</span>
-              <div class="prices">
-                <span class="original">$4.99</span>
-                <span class="sale-price">$3.74</span>
-              </div>
-            </div>
-            <div class="sale-item">
-              <span class="discount">-40%</span>
-              <span class="item-name">Trash Bags (30ct)</span>
-              <div class="prices">
-                <span class="original">$4.49</span>
-                <span class="sale-price">$2.69</span>
-              </div>
-            </div>
-            <div class="sale-item">
-              <span class="discount">-20%</span>
-              <span class="item-name">Laundry Detergent</span>
-              <div class="prices">
-                <span class="original">$6.99</span>
-                <span class="sale-price">$5.59</span>
-              </div>
-            </div>
-            <div class="sale-item">
-              <span class="discount">-35%</span>
-              <span class="item-name">Air Freshener (3pk)</span>
-              <div class="prices">
-                <span class="original">$3.99</span>
-                <span class="sale-price">$2.59</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="store-slide">
-          <div class="store-name">ACE Food Pantry</div>
-          <div class="store-type">Free Resource - Purdue University Campus</div>
-          <div class="free-banner">FREE</div>
-          <p class="pantry-note">No item list available. Open to all Purdue students, faculty, and staff.</p>
-          <div class="hours-grid">
-            <div class="hours-row">
-              <span class="day">Monday</span>
-              <span class="time">10:00 AM - 4:00 PM</span>
-            </div>
-            <div class="hours-row">
-              <span class="day">Tuesday</span>
-              <span class="time">10:00 AM - 6:00 PM</span>
-            </div>
-            <div class="hours-row">
-              <span class="day">Wednesday</span>
-              <span class="time">10:00 AM - 4:00 PM</span>
-            </div>
-            <div class="hours-row">
-              <span class="day">Thursday</span>
-              <span class="time">10:00 AM - 6:00 PM</span>
-            </div>
-            <div class="hours-row">
-              <span class="day">Friday</span>
-              <span class="time">10:00 AM - 2:00 PM</span>
-            </div>
-            <div class="hours-row closed">
-              <span class="day">Saturday</span>
-              <span class="time">Closed</span>
-            </div>
-            <div class="hours-row closed">
-              <span class="day">Sunday</span>
-              <span class="time">Closed</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-nav">
-        <button class="carousel-btn" onclick="moveSlide(-1)">&#8592;</button>
-        <div class="carousel-dots" id="dots">
-          <span class="dot active" onclick="goToSlide(0)"></span>
-          <span class="dot" onclick="goToSlide(1)"></span>
-          <span class="dot" onclick="goToSlide(2)"></span>
-          <span class="dot" onclick="goToSlide(3)"></span>
-          <span class="dot" onclick="goToSlide(4)"></span>
-          <span class="dot" onclick="goToSlide(5)"></span>
-        </div>
-        <button class="carousel-btn" onclick="moveSlide(1)">&#8594;</button>
       </div>
     </div>
   </div>
   <footer>ZipSales - Store Sales Tracker (Mockup)</footer>
   <script>
+    var data = null;
     var current = 0;
-    var slides = document.querySelectorAll('.store-slide');
-    var dots = document.querySelectorAll('.dot');
-    var listItems = document.querySelectorAll('.store-list-item');
+
+    function getItemsForStore(storeId) {
+      return data.items.filter(function(item) {
+        return item.storeId === storeId;
+      });
+    }
+
+    function getStoreById(storeId) {
+      return data.stores.find(function(s) { return s.id === storeId; });
+    }
+
+    function renderSaleItem(item, store) {
+      return '<a class="sale-item" href="' + store.url + '" target="_blank" rel="noopener">' +
+        '<span class="discount">-' + item.discount + '%</span>' +
+        '<span class="item-name">' + item.name + '</span>' +
+        '<div class="prices">' +
+          '<span class="original">$' + item.originalPrice.toFixed(2) + '</span>' +
+          '<span class="sale-price">$' + item.salePrice.toFixed(2) + '</span>' +
+        '</div>' +
+      '</a>';
+    }
+
+    function renderSaleItemWithStore(item, store) {
+      return '<a class="sale-item" href="' + store.url + '" target="_blank" rel="noopener">' +
+        '<span class="discount">-' + item.discount + '%</span>' +
+        '<span class="item-name">' + item.name + '</span>' +
+        '<div class="prices">' +
+          '<span class="original">$' + item.originalPrice.toFixed(2) + '</span>' +
+          '<span class="sale-price">$' + item.salePrice.toFixed(2) + '</span>' +
+        '</div>' +
+      '</a>';
+    }
+
+    function renderStoreSlide(store) {
+      if (store.freeResource) {
+        var hoursHtml = '';
+        store.hours.forEach(function(h) {
+          var closedClass = h.time === 'Closed' ? ' closed' : '';
+          hoursHtml += '<div class="hours-row' + closedClass + '">' +
+            '<span class="day">' + h.day + '</span>' +
+            '<span class="time">' + h.time + '</span>' +
+          '</div>';
+        });
+        return '<div class="store-slide">' +
+          '<div class="store-name">' + store.name + '</div>' +
+          '<div class="store-type">Free Resource - ' + store.location + '</div>' +
+          '<a class="free-banner" href="' + store.url + '" target="_blank" rel="noopener">FREE - Visit Website</a>' +
+          '<p class="pantry-note">' + store.note + '</p>' +
+          '<div class="hours-grid">' + hoursHtml + '</div>' +
+        '</div>';
+      }
+
+      var items = getItemsForStore(store.id);
+      var itemsHtml = items.map(function(item) {
+        return renderSaleItem(item, store);
+      }).join('');
+
+      return '<div class="store-slide">' +
+        '<div class="store-name">' + store.name + '</div>' +
+        '<div class="store-type">' + store.type + '</div>' +
+        '<div class="sale-items">' + itemsHtml + '</div>' +
+      '</div>';
+    }
+
+    function renderPage() {
+      document.getElementById('zip-title').textContent =
+        'Sales Overview - Zip Code ' + data.zipCode;
+      document.getElementById('zip-subtitle').textContent =
+        data.location + ' | March 2026';
+      document.getElementById('store-count').textContent = data.stores.length;
+
+      var storeListEl = document.getElementById('store-list');
+      storeListEl.innerHTML = data.stores.map(function(store, i) {
+        var items = getItemsForStore(store.id);
+        var countText = store.freeResource
+          ? '<span class="free-tag">Free - See hours</span>'
+          : items.length + ' items on sale';
+        var selectedClass = i === 0 ? ' selected' : '';
+        return '<div class="store-list-item' + selectedClass + '" onclick="goToSlide(' + i + ')">' +
+          '<div class="name">' + store.name + '</div>' +
+          '<div class="type">' + store.type + '</div>' +
+          '<div class="count">' + countText + '</div>' +
+        '</div>';
+      }).join('');
+
+      var carouselEl = document.getElementById('carousel');
+      carouselEl.innerHTML = data.stores.map(function(store) {
+        return renderStoreSlide(store);
+      }).join('');
+
+      var dotsEl = document.getElementById('dots');
+      dotsEl.innerHTML = data.stores.map(function(_, i) {
+        var activeClass = i === 0 ? ' active' : '';
+        return '<span class="dot' + activeClass + '" onclick="goToSlide(' + i + ')"></span>';
+      }).join('');
+    }
+
     function updateCarousel() {
+      var slides = document.querySelectorAll('.store-slide');
+      var dots = document.querySelectorAll('.dot');
+      var listItems = document.querySelectorAll('.store-list-item');
       for (var i = 0; i < slides.length; i++) {
         slides[i].style.transform = 'translateX(-' + (current * 100) + '%)';
         dots[i].classList.remove('active');
@@ -572,14 +386,76 @@
       dots[current].classList.add('active');
       listItems[current].classList.add('selected');
     }
+
     function moveSlide(dir) {
-      current = (current + dir + slides.length) % slides.length;
+      var total = data.stores.length;
+      current = (current + dir + total) % total;
       updateCarousel();
     }
+
     function goToSlide(index) {
       current = index;
       updateCarousel();
     }
+
+    function searchItems(query) {
+      var resultsEl = document.getElementById('search-results');
+      var browseEl = document.getElementById('browse-section');
+
+      if (!query) {
+        resultsEl.style.display = 'none';
+        browseEl.style.display = '';
+        return;
+      }
+
+      var lowerQuery = query.toLowerCase();
+      var matches = data.items.filter(function(item) {
+        return item.name.toLowerCase().indexOf(lowerQuery) !== -1;
+      });
+
+      resultsEl.style.display = '';
+      browseEl.style.display = 'none';
+
+      if (matches.length === 0) {
+        resultsEl.innerHTML = '<div class="no-results">No items found matching "' +
+          query.replace(/</g, '&lt;') + '"</div>';
+        return;
+      }
+
+      var grouped = {};
+      matches.forEach(function(item) {
+        if (!grouped[item.storeId]) grouped[item.storeId] = [];
+        grouped[item.storeId].push(item);
+      });
+
+      var html = '';
+      Object.keys(grouped).forEach(function(storeId) {
+        var store = getStoreById(storeId);
+        var items = grouped[storeId];
+        html += '<div class="search-store-group">' +
+          '<div class="store-group-header">' + store.name + '</div>' +
+          '<div class="store-group-type">' + store.type + '</div>' +
+          '<div class="sale-items">' +
+            items.map(function(item) {
+              return renderSaleItemWithStore(item, store);
+            }).join('') +
+          '</div>' +
+        '</div>';
+      });
+
+      resultsEl.innerHTML = html;
+    }
+
+    fetch('data.json')
+      .then(function(res) { return res.json(); })
+      .then(function(json) {
+        data = json;
+        renderPage();
+      });
+
+    document.getElementById('item-search-input').addEventListener('input', function(e) {
+      searchItems(e.target.value.trim());
+    });
   </script>
 </body>
 </html>

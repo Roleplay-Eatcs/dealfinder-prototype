@@ -1,0 +1,90 @@
+{
+  "zipCode": "47906",
+  "location": "West Lafayette, IN",
+  "stores": [
+    {
+      "id": "payless",
+      "name": "Payless Super Market",
+      "type": "Grocery",
+      "url": "https://www.pay-less.com/"
+    },
+    {
+      "id": "target",
+      "name": "Target",
+      "type": "General Retail",
+      "url": "https://www.target.com/"
+    },
+    {
+      "id": "cvs",
+      "name": "CVS Pharmacy",
+      "type": "Pharmacy",
+      "url": "https://www.cvs.com/"
+    },
+    {
+      "id": "bestbuy",
+      "name": "Best Buy",
+      "type": "Electronics",
+      "url": "https://www.bestbuy.com/"
+    },
+    {
+      "id": "dollargeneral",
+      "name": "Dollar General",
+      "type": "General Retail",
+      "url": "https://www.dollargeneral.com/"
+    },
+    {
+      "id": "ace-pantry",
+      "name": "ACE Food Pantry",
+      "type": "Free Resource",
+      "url": "https://acefoodpantry.wixsite.com/website",
+      "freeResource": true,
+      "location": "Purdue University Campus",
+      "note": "No item list available. Open to all Purdue students, faculty, and staff.",
+      "hours": [
+        { "day": "Monday", "time": "10:00 AM - 4:00 PM" },
+        { "day": "Tuesday", "time": "10:00 AM - 6:00 PM" },
+        { "day": "Wednesday", "time": "10:00 AM - 4:00 PM" },
+        { "day": "Thursday", "time": "10:00 AM - 6:00 PM" },
+        { "day": "Friday", "time": "10:00 AM - 2:00 PM" },
+        { "day": "Saturday", "time": "Closed" },
+        { "day": "Sunday", "time": "Closed" }
+      ]
+    }
+  ],
+  "items": [
+    { "storeId": "payless", "name": "Whole Milk (1 gal)", "originalPrice": 4.29, "salePrice": 2.99, "discount": 30 },
+    { "storeId": "payless", "name": "Chicken Breast (lb)", "originalPrice": 5.99, "salePrice": 4.49, "discount": 25 },
+    { "storeId": "payless", "name": "Strawberries (1 lb)", "originalPrice": 4.99, "salePrice": 2.99, "discount": 40 },
+    { "storeId": "payless", "name": "Sourdough Bread", "originalPrice": 3.49, "salePrice": 2.79, "discount": 20 },
+    { "storeId": "payless", "name": "Greek Yogurt (6pk)", "originalPrice": 7.99, "salePrice": 3.99, "discount": 50 },
+    { "storeId": "payless", "name": "Orange Juice (64oz)", "originalPrice": 4.69, "salePrice": 3.99, "discount": 15 },
+
+    { "storeId": "target", "name": "Bath Towel Set (4pk)", "originalPrice": 29.99, "salePrice": 19.49, "discount": 35 },
+    { "storeId": "target", "name": "Desk Lamp", "originalPrice": 24.99, "salePrice": 19.99, "discount": 20 },
+    { "storeId": "target", "name": "Throw Blanket", "originalPrice": 19.99, "salePrice": 11.99, "discount": 40 },
+    { "storeId": "target", "name": "Candle Set (3pk)", "originalPrice": 14.99, "salePrice": 11.24, "discount": 25 },
+    { "storeId": "target", "name": "Storage Bins (set)", "originalPrice": 22.99, "salePrice": 15.99, "discount": 30 },
+    { "storeId": "target", "name": "Phone Charger Cable", "originalPrice": 12.99, "salePrice": 10.99, "discount": 15 },
+
+    { "storeId": "cvs", "name": "Vitamin D (200ct)", "originalPrice": 12.99, "salePrice": 7.79, "discount": 40 },
+    { "storeId": "cvs", "name": "Shampoo (12oz)", "originalPrice": 8.49, "salePrice": 5.94, "discount": 30 },
+    { "storeId": "cvs", "name": "Sunscreen SPF 50", "originalPrice": 10.99, "salePrice": 8.24, "discount": 25 },
+    { "storeId": "cvs", "name": "Bandages (100ct)", "originalPrice": 6.99, "salePrice": 3.49, "discount": 50 },
+    { "storeId": "cvs", "name": "Toothpaste (2pk)", "originalPrice": 7.49, "salePrice": 5.99, "discount": 20 },
+    { "storeId": "cvs", "name": "Hand Soap (3pk)", "originalPrice": 9.99, "salePrice": 6.49, "discount": 35 },
+
+    { "storeId": "bestbuy", "name": "Wireless Earbuds", "originalPrice": 79.99, "salePrice": 63.99, "discount": 20 },
+    { "storeId": "bestbuy", "name": "USB-C Hub", "originalPrice": 34.99, "salePrice": 29.74, "discount": 15 },
+    { "storeId": "bestbuy", "name": "Bluetooth Speaker", "originalPrice": 49.99, "salePrice": 34.99, "discount": 30 },
+    { "storeId": "bestbuy", "name": "Webcam 1080p", "originalPrice": 59.99, "salePrice": 44.99, "discount": 25 },
+    { "storeId": "bestbuy", "name": "HDMI Cable (6ft)", "originalPrice": 14.99, "salePrice": 8.99, "discount": 40 },
+    { "storeId": "bestbuy", "name": "Keyboard (Wireless)", "originalPrice": 44.99, "salePrice": 40.49, "discount": 10 },
+
+    { "storeId": "dollargeneral", "name": "Paper Towels (6pk)", "originalPrice": 5.99, "salePrice": 2.99, "discount": 50 },
+    { "storeId": "dollargeneral", "name": "Dish Soap (28oz)", "originalPrice": 2.99, "salePrice": 2.09, "discount": 30 },
+    { "storeId": "dollargeneral", "name": "AA Batteries (8pk)", "originalPrice": 4.99, "salePrice": 3.74, "discount": 25 },
+    { "storeId": "dollargeneral", "name": "Trash Bags (30ct)", "originalPrice": 4.49, "salePrice": 2.69, "discount": 40 },
+    { "storeId": "dollargeneral", "name": "Laundry Detergent", "originalPrice": 6.99, "salePrice": 5.59, "discount": 20 },
+    { "storeId": "dollargeneral", "name": "Air Freshener (3pk)", "originalPrice": 3.99, "salePrice": 2.59, "discount": 35 }
+  ]
+}
