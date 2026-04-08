@@ -16,12 +16,16 @@
       align-items: center;
     }
     header h1 { font-size: 1.6rem; letter-spacing: 1px; }
+    .header-item-search {
+      flex: 1;
+      margin: 0 20px;
+    }
     .header-item-search input {
       padding: 8px 14px;
       border: none;
       border-radius: 6px;
       font-size: 0.95rem;
-      width: 280px;
+      width: 100%;
     }
     .purdue-logo img {
       height: 40px;
@@ -29,20 +33,28 @@
     .container { max-width: 1100px; margin: 0 auto; padding: 30px 20px; }
     .zip-header { margin-bottom: 24px; }
     .zip-header h2 { font-size: 1.4rem; color: #000000; }
-    .zip-header p { color: #666; font-size: 0.95rem; margin-top: 4px; }
-    .active-stores {
+    .section-title { font-size: 1.15rem; font-weight: 600; margin-bottom: 14px; }
+
+    .category-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+    .category-card {
       background: #fff;
       border-radius: 10px;
-      padding: 16px 24px;
+      padding: 20px;
       box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-      margin-bottom: 24px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border-color 0.2s, transform 0.2s;
+      text-align: center;
     }
-    .active-stores .label { font-size: 0.85rem; color: #888; text-transform: uppercase; letter-spacing: 0.5px; }
-    .active-stores .value { font-size: 1.6rem; font-weight: 700; }
-    .section-title { font-size: 1.15rem; font-weight: 600; margin-bottom: 14px; }
+    .category-card:hover { border-color: #CFB991; transform: translateY(-2px); }
+    .category-card .cat-name { font-weight: 700; font-size: 1.05rem; margin-bottom: 4px; }
+    .category-card .cat-count { font-size: 0.9rem; color: #CFB991; }
+
     .store-list {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -65,23 +77,7 @@
     .store-list-item .count { font-size: 0.95rem; color: #CFB991; margin-top: 2px; }
     .store-list-item .free-tag { color: #2ecc71; font-weight: 600; }
 
-    .item-search {
-      margin-bottom: 24px;
-      position: relative;
-    }
-    .item-search input {
-      width: 100%;
-      padding: 12px 18px;
-      border: 2px solid #ddd;
-      border-radius: 8px;
-      font-size: 1rem;
-      outline: none;
-      transition: border-color 0.2s;
-    }
-    .item-search input:focus { border-color: #CFB991; }
-    .search-results {
-      margin-bottom: 30px;
-    }
+    .search-results { margin-bottom: 30px; }
     .search-results .search-store-group {
       background: #fff;
       border-radius: 10px;
@@ -108,17 +104,17 @@
 
     .carousel-wrapper { position: relative; margin-bottom: 30px; }
     .carousel {
-      display: flex;
-      overflow: hidden;
       border-radius: 10px;
     }
     .store-slide {
-      min-width: 100%;
+      display: none;
       background: #fff;
       border-radius: 10px;
       box-shadow: 0 1px 4px rgba(0,0,0,0.08);
       padding: 28px 32px;
-      transition: transform 0.4s ease;
+    }
+    .store-slide.active-slide {
+      display: block;
     }
     .store-slide .store-name {
       font-size: 1.3rem;
@@ -220,6 +216,77 @@
     .hours-row .day { font-weight: 600; font-size: 0.95rem; }
     .hours-row .time { font-size: 0.95rem; color: #333; }
     .hours-row.closed .time { color: #999; }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: none;
+      border: 2px solid #000;
+      border-radius: 6px;
+      padding: 8px 16px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-bottom: 20px;
+      transition: background 0.2s;
+    }
+    .back-btn:hover { background: #CFB991; }
+
+    .category-detail-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .item-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      padding: 18px 24px;
+      margin-bottom: 12px;
+    }
+    .item-card .item-card-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .item-card .store-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-top: 1px solid #eee;
+    }
+    .item-card .store-row:first-of-type { border-top: none; }
+    .store-row .store-row-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+      min-width: 160px;
+    }
+    .store-row .store-row-prices {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .store-row .original {
+      font-size: 0.85rem;
+      color: #999;
+      text-decoration: line-through;
+    }
+    .store-row .sale-price {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #CFB991;
+    }
+    .store-row .discount {
+      font-size: 0.75rem;
+      background: #CFB991;
+      color: #000;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -241,18 +308,23 @@
   <div class="container">
     <div class="zip-header">
       <h2 id="zip-title">Sales Overview</h2>
-      <p id="zip-subtitle"></p>
-    </div>
-    <div class="active-stores">
-      <span class="label">Active Stores with Sales</span>
-      <span class="value" id="store-count">0</span>
     </div>
 
     <div class="search-results" id="search-results" style="display: none;"></div>
 
+    <div id="category-detail" style="display: none;">
+      <button class="back-btn" onclick="showMain()">&#8592; Back</button>
+      <h2 class="category-detail-title" id="category-detail-title"></h2>
+      <div id="category-detail-items"></div>
+    </div>
+
     <div id="browse-section">
+      <h3 class="section-title">Categories</h3>
+      <div class="category-list" id="category-list"></div>
+
       <h3 class="section-title">Stores</h3>
       <div class="store-list" id="store-list"></div>
+
       <h3 class="section-title">Items on Sale</h3>
       <div class="carousel-wrapper">
         <div class="carousel" id="carousel"></div>
@@ -279,18 +351,28 @@
       return data.stores.find(function(s) { return s.id === storeId; });
     }
 
-    function renderSaleItem(item, store) {
-      return '<a class="sale-item" href="' + store.url + '" target="_blank" rel="noopener">' +
-        '<span class="discount">-' + item.discount + '%</span>' +
-        '<span class="item-name">' + item.name + '</span>' +
-        '<div class="prices">' +
-          '<span class="original">$' + item.originalPrice.toFixed(2) + '</span>' +
-          '<span class="sale-price">$' + item.salePrice.toFixed(2) + '</span>' +
-        '</div>' +
-      '</a>';
+    function getUniqueItemsByCategory(categoryId) {
+      var items = data.items.filter(function(item) {
+        return item.category === categoryId;
+      });
+      var names = [];
+      var unique = [];
+      items.forEach(function(item) {
+        if (names.indexOf(item.name) === -1) {
+          names.push(item.name);
+          unique.push(item.name);
+        }
+      });
+      return unique;
     }
 
-    function renderSaleItemWithStore(item, store) {
+    function getItemStoreEntries(itemName, categoryId) {
+      return data.items.filter(function(item) {
+        return item.name === itemName && item.category === categoryId;
+      });
+    }
+
+    function renderSaleItem(item, store) {
       return '<a class="sale-item" href="' + store.url + '" target="_blank" rel="noopener">' +
         '<span class="discount">-' + item.discount + '%</span>' +
         '<span class="item-name">' + item.name + '</span>' +
@@ -333,11 +415,16 @@
     }
 
     function renderPage() {
-      document.getElementById('zip-title').textContent =
-        'Sales Overview - Zip Code ' + data.zipCode;
-      document.getElementById('zip-subtitle').textContent =
-        data.location + ' | March 2026';
-      document.getElementById('store-count').textContent = data.stores.length;
+      document.getElementById('zip-title').textContent = 'Sales Overview';
+
+      var catListEl = document.getElementById('category-list');
+      catListEl.innerHTML = data.categories.map(function(cat) {
+        var uniqueItems = getUniqueItemsByCategory(cat.id);
+        return '<div class="category-card" onclick="showCategory(\'' + cat.id + '\')">' +
+          '<div class="cat-name">' + cat.name + '</div>' +
+          '<div class="cat-count">' + uniqueItems.length + ' items on sale</div>' +
+        '</div>';
+      }).join('');
 
       var storeListEl = document.getElementById('store-list');
       storeListEl.innerHTML = data.stores.map(function(store, i) {
@@ -363,6 +450,51 @@
         var activeClass = i === 0 ? ' active' : '';
         return '<span class="dot' + activeClass + '" onclick="goToSlide(' + i + ')"></span>';
       }).join('');
+
+      var firstSlide = document.querySelector('.store-slide');
+      if (firstSlide) {
+        firstSlide.classList.add('active-slide');
+      }
+    }
+
+    function showCategory(categoryId) {
+      var cat = data.categories.find(function(c) { return c.id === categoryId; });
+      var uniqueNames = getUniqueItemsByCategory(categoryId);
+
+      document.getElementById('browse-section').style.display = 'none';
+      document.getElementById('search-results').style.display = 'none';
+      document.getElementById('category-detail').style.display = '';
+      document.getElementById('category-detail-title').textContent = cat.name;
+
+      var html = '';
+      uniqueNames.forEach(function(name) {
+        var entries = getItemStoreEntries(name, categoryId);
+        entries.sort(function(a, b) { return a.salePrice - b.salePrice; });
+        html += '<div class="item-card">';
+        html += '<div class="item-card-name">' + name + '</div>';
+        entries.forEach(function(entry) {
+          var store = getStoreById(entry.storeId);
+          html += '<div class="store-row">' +
+            '<span class="store-row-name">' + store.name + '</span>' +
+            '<div class="store-row-prices">' +
+              '<span class="original">$' + entry.originalPrice.toFixed(2) + '</span>' +
+              '<span class="sale-price">$' + entry.salePrice.toFixed(2) + '</span>' +
+              '<span class="discount">-' + entry.discount + '%</span>' +
+            '</div>' +
+          '</div>';
+        });
+        html += '</div>';
+      });
+
+      document.getElementById('category-detail-items').innerHTML = html;
+      window.scrollTo(0, 0);
+    }
+
+    function showMain() {
+      document.getElementById('category-detail').style.display = 'none';
+      document.getElementById('search-results').style.display = 'none';
+      document.getElementById('browse-section').style.display = '';
+      document.getElementById('item-search-input').value = '';
     }
 
     function updateCarousel() {
@@ -370,10 +502,11 @@
       var dots = document.querySelectorAll('.dot');
       var listItems = document.querySelectorAll('.store-list-item');
       for (var i = 0; i < slides.length; i++) {
-        slides[i].style.transform = 'translateX(-' + (current * 100) + '%)';
+        slides[i].classList.remove('active-slide');
         dots[i].classList.remove('active');
         listItems[i].classList.remove('selected');
       }
+      slides[current].classList.add('active-slide');
       dots[current].classList.add('active');
       listItems[current].classList.add('selected');
     }
@@ -392,9 +525,11 @@
     function searchItems(query) {
       var resultsEl = document.getElementById('search-results');
       var browseEl = document.getElementById('browse-section');
+      var detailEl = document.getElementById('category-detail');
 
       if (!query) {
         resultsEl.style.display = 'none';
+        detailEl.style.display = 'none';
         browseEl.style.display = '';
         return;
       }
@@ -406,6 +541,7 @@
 
       resultsEl.style.display = '';
       browseEl.style.display = 'none';
+      detailEl.style.display = 'none';
 
       if (matches.length === 0) {
         resultsEl.innerHTML = '<div class="no-results">No items found matching "' +
@@ -428,7 +564,7 @@
           '<div class="store-group-type">' + store.type + '</div>' +
           '<div class="sale-items">' +
             items.map(function(item) {
-              return renderSaleItemWithStore(item, store);
+              return renderSaleItem(item, store);
             }).join('') +
           '</div>' +
         '</div>';

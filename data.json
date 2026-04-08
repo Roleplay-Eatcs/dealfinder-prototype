@@ -1,6 +1,10 @@
 {
-  "zipCode": "47906",
-  "location": "West Lafayette, IN",
+  "categories": [
+    { "id": "groceries", "name": "Groceries" },
+    { "id": "household", "name": "Household Essentials" },
+    { "id": "health", "name": "Health & Personal Care" },
+    { "id": "snacks", "name": "Snacks & Beverages" }
+  ],
   "stores": [
     {
       "id": "payless",
@@ -94,67 +98,321 @@
     }
   ],
   "items": [
-    { "storeId": "payless", "name": "Whole Milk (1 gal)", "originalPrice": 4.29, "salePrice": 2.99, "discount": 30 },
-    { "storeId": "payless", "name": "Chicken Breast (lb)", "originalPrice": 5.99, "salePrice": 4.49, "discount": 25 },
-    { "storeId": "payless", "name": "Strawberries (1 lb)", "originalPrice": 4.99, "salePrice": 2.99, "discount": 40 },
-    { "storeId": "payless", "name": "Sourdough Bread", "originalPrice": 3.49, "salePrice": 2.79, "discount": 20 },
-    { "storeId": "payless", "name": "Greek Yogurt (6pk)", "originalPrice": 7.99, "salePrice": 3.99, "discount": 50 },
-    { "storeId": "payless", "name": "Orange Juice (64oz)", "originalPrice": 4.69, "salePrice": 3.99, "discount": 15 },
+    { "storeId": "payless", "category": "groceries", "name": "Whole Milk (1 gal)", "originalPrice": 4.29, "salePrice": 2.99, "discount": 30 },
+    { "storeId": "aldi", "category": "groceries", "name": "Whole Milk (1 gal)", "originalPrice": 3.79, "salePrice": 2.49, "discount": 34 },
+    { "storeId": "walmart", "category": "groceries", "name": "Whole Milk (1 gal)", "originalPrice": 3.99, "salePrice": 2.79, "discount": 30 },
 
-    { "storeId": "target", "name": "Bath Towel Set (4pk)", "originalPrice": 29.99, "salePrice": 19.49, "discount": 35 },
-    { "storeId": "target", "name": "Desk Lamp", "originalPrice": 24.99, "salePrice": 19.99, "discount": 20 },
-    { "storeId": "target", "name": "Throw Blanket", "originalPrice": 19.99, "salePrice": 11.99, "discount": 40 },
-    { "storeId": "target", "name": "Candle Set (3pk)", "originalPrice": 14.99, "salePrice": 11.24, "discount": 25 },
-    { "storeId": "target", "name": "Storage Bins (set)", "originalPrice": 22.99, "salePrice": 15.99, "discount": 30 },
-    { "storeId": "target", "name": "Phone Charger Cable", "originalPrice": 12.99, "salePrice": 10.99, "discount": 15 },
+    { "storeId": "payless", "category": "groceries", "name": "Large Eggs (dozen)", "originalPrice": 3.49, "salePrice": 2.49, "discount": 29 },
+    { "storeId": "aldi", "category": "groceries", "name": "Large Eggs (dozen)", "originalPrice": 3.29, "salePrice": 1.97, "discount": 40 },
+    { "storeId": "walmart", "category": "groceries", "name": "Large Eggs (dozen)", "originalPrice": 3.59, "salePrice": 2.69, "discount": 25 },
 
-    { "storeId": "cvs", "name": "Vitamin D (200ct)", "originalPrice": 12.99, "salePrice": 7.79, "discount": 40 },
-    { "storeId": "cvs", "name": "Shampoo (12oz)", "originalPrice": 8.49, "salePrice": 5.94, "discount": 30 },
-    { "storeId": "cvs", "name": "Sunscreen SPF 50", "originalPrice": 10.99, "salePrice": 8.24, "discount": 25 },
-    { "storeId": "cvs", "name": "Bandages (100ct)", "originalPrice": 6.99, "salePrice": 3.49, "discount": 50 },
-    { "storeId": "cvs", "name": "Toothpaste (2pk)", "originalPrice": 7.49, "salePrice": 5.99, "discount": 20 },
-    { "storeId": "cvs", "name": "Hand Soap (3pk)", "originalPrice": 9.99, "salePrice": 6.49, "discount": 35 },
+    { "storeId": "payless", "category": "groceries", "name": "Chicken Breast (lb)", "originalPrice": 5.99, "salePrice": 4.49, "discount": 25 },
+    { "storeId": "freshthyme", "category": "groceries", "name": "Chicken Breast (lb)", "originalPrice": 6.49, "salePrice": 4.54, "discount": 30 },
+    { "storeId": "walmart", "category": "groceries", "name": "Chicken Breast (lb)", "originalPrice": 5.49, "salePrice": 3.84, "discount": 30 },
 
-    { "storeId": "bestbuy", "name": "Wireless Earbuds", "originalPrice": 79.99, "salePrice": 63.99, "discount": 20 },
-    { "storeId": "bestbuy", "name": "USB-C Hub", "originalPrice": 34.99, "salePrice": 29.74, "discount": 15 },
-    { "storeId": "bestbuy", "name": "Bluetooth Speaker", "originalPrice": 49.99, "salePrice": 34.99, "discount": 30 },
-    { "storeId": "bestbuy", "name": "Webcam 1080p", "originalPrice": 59.99, "salePrice": 44.99, "discount": 25 },
-    { "storeId": "bestbuy", "name": "HDMI Cable (6ft)", "originalPrice": 14.99, "salePrice": 8.99, "discount": 40 },
-    { "storeId": "bestbuy", "name": "Keyboard (Wireless)", "originalPrice": 44.99, "salePrice": 40.49, "discount": 10 },
+    { "storeId": "payless", "category": "groceries", "name": "Ground Beef (1 lb)", "originalPrice": 6.49, "salePrice": 4.54, "discount": 30 },
+    { "storeId": "walmart", "category": "groceries", "name": "Ground Beef (1 lb)", "originalPrice": 5.99, "salePrice": 3.99, "discount": 33 },
+    { "storeId": "aldi", "category": "groceries", "name": "Ground Beef (1 lb)", "originalPrice": 5.79, "salePrice": 3.99, "discount": 31 },
 
-    { "storeId": "dollargeneral", "name": "Paper Towels (6pk)", "originalPrice": 5.99, "salePrice": 2.99, "discount": 50 },
-    { "storeId": "dollargeneral", "name": "Dish Soap (28oz)", "originalPrice": 2.99, "salePrice": 2.09, "discount": 30 },
-    { "storeId": "dollargeneral", "name": "AA Batteries (8pk)", "originalPrice": 4.99, "salePrice": 3.74, "discount": 25 },
-    { "storeId": "dollargeneral", "name": "Trash Bags (30ct)", "originalPrice": 4.49, "salePrice": 2.69, "discount": 40 },
-    { "storeId": "dollargeneral", "name": "Laundry Detergent", "originalPrice": 6.99, "salePrice": 5.59, "discount": 20 },
-    { "storeId": "dollargeneral", "name": "Air Freshener (3pk)", "originalPrice": 3.99, "salePrice": 2.59, "discount": 35 },
+    { "storeId": "aldi", "category": "groceries", "name": "Sliced Bread", "originalPrice": 1.99, "salePrice": 1.29, "discount": 35 },
+    { "storeId": "walmart", "category": "groceries", "name": "Sliced Bread", "originalPrice": 2.49, "salePrice": 1.49, "discount": 40 },
+    { "storeId": "payless", "category": "groceries", "name": "Sliced Bread", "originalPrice": 2.79, "salePrice": 1.99, "discount": 29 },
 
-    { "storeId": "freshthyme", "name": "Organic Bananas (bunch)", "originalPrice": 2.49, "salePrice": 1.49, "discount": 40 },
-    { "storeId": "freshthyme", "name": "Avocados (4ct)", "originalPrice": 5.99, "salePrice": 3.99, "discount": 33 },
-    { "storeId": "freshthyme", "name": "Ground Turkey (1 lb)", "originalPrice": 6.49, "salePrice": 4.54, "discount": 30 },
-    { "storeId": "freshthyme", "name": "Almond Milk (64oz)", "originalPrice": 4.29, "salePrice": 2.99, "discount": 30 },
-    { "storeId": "freshthyme", "name": "Mixed Greens (5oz)", "originalPrice": 3.99, "salePrice": 2.79, "discount": 30 },
-    { "storeId": "freshthyme", "name": "Granola (12oz)", "originalPrice": 5.49, "salePrice": 3.29, "discount": 40 },
+    { "storeId": "aldi", "category": "groceries", "name": "White Rice (2 lb)", "originalPrice": 2.99, "salePrice": 1.79, "discount": 40 },
+    { "storeId": "walmart", "category": "groceries", "name": "White Rice (2 lb)", "originalPrice": 3.29, "salePrice": 2.29, "discount": 30 },
 
-    { "storeId": "salisbury", "name": "Deli Turkey (1 lb)", "originalPrice": 8.99, "salePrice": 6.29, "discount": 30 },
-    { "storeId": "salisbury", "name": "Cheddar Cheese Block", "originalPrice": 5.49, "salePrice": 3.84, "discount": 30 },
-    { "storeId": "salisbury", "name": "Fresh Bagels (6ct)", "originalPrice": 4.99, "salePrice": 3.49, "discount": 30 },
-    { "storeId": "salisbury", "name": "Rotisserie Chicken", "originalPrice": 8.99, "salePrice": 5.99, "discount": 33 },
-    { "storeId": "salisbury", "name": "Coffee (12oz bag)", "originalPrice": 9.99, "salePrice": 6.99, "discount": 30 },
-    { "storeId": "salisbury", "name": "Frozen Pizza", "originalPrice": 6.49, "salePrice": 4.54, "discount": 30 },
+    { "storeId": "aldi", "category": "groceries", "name": "Pasta (1 lb)", "originalPrice": 1.49, "salePrice": 0.89, "discount": 40 },
+    { "storeId": "payless", "category": "groceries", "name": "Pasta (1 lb)", "originalPrice": 1.99, "salePrice": 1.29, "discount": 35 },
+    { "storeId": "freshthyme", "category": "groceries", "name": "Pasta (1 lb)", "originalPrice": 2.29, "salePrice": 1.49, "discount": 35 },
 
-    { "storeId": "aldi", "name": "Eggs (dozen)", "originalPrice": 3.29, "salePrice": 1.97, "discount": 40 },
-    { "storeId": "aldi", "name": "Sliced Bread", "originalPrice": 1.99, "salePrice": 1.29, "discount": 35 },
-    { "storeId": "aldi", "name": "Pasta (1 lb)", "originalPrice": 1.49, "salePrice": 0.89, "discount": 40 },
-    { "storeId": "aldi", "name": "Marinara Sauce (24oz)", "originalPrice": 2.49, "salePrice": 1.49, "discount": 40 },
-    { "storeId": "aldi", "name": "Frozen Vegetables (12oz)", "originalPrice": 1.79, "salePrice": 1.25, "discount": 30 },
-    { "storeId": "aldi", "name": "Peanut Butter (16oz)", "originalPrice": 2.99, "salePrice": 1.79, "discount": 40 },
+    { "storeId": "payless", "category": "groceries", "name": "Butter (1 lb)", "originalPrice": 4.99, "salePrice": 3.49, "discount": 30 },
+    { "storeId": "aldi", "category": "groceries", "name": "Butter (1 lb)", "originalPrice": 4.49, "salePrice": 2.99, "discount": 33 },
 
-    { "storeId": "walmart", "name": "Folding Chair", "originalPrice": 24.99, "salePrice": 14.99, "discount": 40 },
-    { "storeId": "walmart", "name": "T-Shirt (3pk)", "originalPrice": 14.99, "salePrice": 9.99, "discount": 33 },
-    { "storeId": "walmart", "name": "Ground Beef (1 lb)", "originalPrice": 5.99, "salePrice": 3.99, "discount": 33 },
-    { "storeId": "walmart", "name": "Cereal (18oz)", "originalPrice": 4.49, "salePrice": 2.99, "discount": 33 },
-    { "storeId": "walmart", "name": "Backpack", "originalPrice": 19.99, "salePrice": 11.99, "discount": 40 },
-    { "storeId": "walmart", "name": "Paper Plates (100ct)", "originalPrice": 6.99, "salePrice": 4.89, "discount": 30 }
+    { "storeId": "salisbury", "category": "groceries", "name": "Cheddar Cheese Block", "originalPrice": 5.49, "salePrice": 3.84, "discount": 30 },
+    { "storeId": "payless", "category": "groceries", "name": "Cheddar Cheese Block", "originalPrice": 5.99, "salePrice": 3.89, "discount": 35 },
+
+    { "storeId": "payless", "category": "groceries", "name": "Greek Yogurt (32oz)", "originalPrice": 5.99, "salePrice": 3.99, "discount": 33 },
+    { "storeId": "freshthyme", "category": "groceries", "name": "Greek Yogurt (32oz)", "originalPrice": 6.49, "salePrice": 4.54, "discount": 30 },
+
+    { "storeId": "freshthyme", "category": "groceries", "name": "Bananas (bunch)", "originalPrice": 2.49, "salePrice": 1.49, "discount": 40 },
+    { "storeId": "aldi", "category": "groceries", "name": "Bananas (bunch)", "originalPrice": 1.89, "salePrice": 1.19, "discount": 37 },
+
+    { "storeId": "payless", "category": "groceries", "name": "Strawberries (1 lb)", "originalPrice": 4.99, "salePrice": 2.99, "discount": 40 },
+    { "storeId": "freshthyme", "category": "groceries", "name": "Strawberries (1 lb)", "originalPrice": 4.49, "salePrice": 2.99, "discount": 33 },
+    { "storeId": "walmart", "category": "groceries", "name": "Strawberries (1 lb)", "originalPrice": 3.99, "salePrice": 2.79, "discount": 30 },
+
+    { "storeId": "aldi", "category": "groceries", "name": "Apples (3 lb bag)", "originalPrice": 4.29, "salePrice": 2.99, "discount": 30 },
+    { "storeId": "freshthyme", "category": "groceries", "name": "Apples (3 lb bag)", "originalPrice": 4.99, "salePrice": 3.49, "discount": 30 },
+
+    { "storeId": "aldi", "category": "groceries", "name": "Potatoes (5 lb bag)", "originalPrice": 4.49, "salePrice": 2.99, "discount": 33 },
+    { "storeId": "walmart", "category": "groceries", "name": "Potatoes (5 lb bag)", "originalPrice": 4.99, "salePrice": 3.49, "discount": 30 },
+
+    { "storeId": "aldi", "category": "groceries", "name": "Yellow Onions (3 lb)", "originalPrice": 3.29, "salePrice": 1.99, "discount": 40 },
+    { "storeId": "payless", "category": "groceries", "name": "Yellow Onions (3 lb)", "originalPrice": 3.49, "salePrice": 2.44, "discount": 30 },
+
+    { "storeId": "aldi", "category": "groceries", "name": "Frozen Vegetables (12oz)", "originalPrice": 1.79, "salePrice": 1.25, "discount": 30 },
+    { "storeId": "walmart", "category": "groceries", "name": "Frozen Vegetables (12oz)", "originalPrice": 2.19, "salePrice": 1.49, "discount": 32 },
+
+    { "storeId": "aldi", "category": "groceries", "name": "Marinara Sauce (24oz)", "originalPrice": 2.49, "salePrice": 1.49, "discount": 40 },
+    { "storeId": "payless", "category": "groceries", "name": "Marinara Sauce (24oz)", "originalPrice": 3.29, "salePrice": 2.29, "discount": 30 },
+
+    { "storeId": "aldi", "category": "groceries", "name": "Peanut Butter (16oz)", "originalPrice": 2.99, "salePrice": 1.79, "discount": 40 },
+    { "storeId": "walmart", "category": "groceries", "name": "Peanut Butter (16oz)", "originalPrice": 3.29, "salePrice": 2.29, "discount": 30 },
+
+    { "storeId": "payless", "category": "groceries", "name": "Canned Tuna (5oz)", "originalPrice": 1.89, "salePrice": 1.29, "discount": 32 },
+    { "storeId": "walmart", "category": "groceries", "name": "Canned Tuna (5oz)", "originalPrice": 1.69, "salePrice": 0.99, "discount": 41 },
+
+    { "storeId": "payless", "category": "groceries", "name": "Sourdough Bread", "originalPrice": 3.49, "salePrice": 2.79, "discount": 20 },
+    { "storeId": "salisbury", "category": "groceries", "name": "Sourdough Bread", "originalPrice": 3.99, "salePrice": 2.79, "discount": 30 },
+
+    { "storeId": "walmart", "category": "groceries", "name": "Tortillas (10ct)", "originalPrice": 2.99, "salePrice": 1.99, "discount": 33 },
+    { "storeId": "aldi", "category": "groceries", "name": "Tortillas (10ct)", "originalPrice": 2.49, "salePrice": 1.49, "discount": 40 },
+
+    { "storeId": "payless", "category": "groceries", "name": "Shredded Cheese (8oz)", "originalPrice": 3.99, "salePrice": 2.79, "discount": 30 },
+    { "storeId": "aldi", "category": "groceries", "name": "Shredded Cheese (8oz)", "originalPrice": 3.49, "salePrice": 2.29, "discount": 34 },
+
+    { "storeId": "payless", "category": "groceries", "name": "Bacon (12oz)", "originalPrice": 6.99, "salePrice": 4.89, "discount": 30 },
+    { "storeId": "freshthyme", "category": "groceries", "name": "Bacon (12oz)", "originalPrice": 7.49, "salePrice": 4.99, "discount": 33 },
+
+    { "storeId": "salisbury", "category": "groceries", "name": "Frozen Pizza", "originalPrice": 6.49, "salePrice": 4.54, "discount": 30 },
+    { "storeId": "walmart", "category": "groceries", "name": "Frozen Pizza", "originalPrice": 5.99, "salePrice": 3.59, "discount": 40 },
+
+    { "storeId": "payless", "category": "groceries", "name": "Orange Juice (64oz)", "originalPrice": 4.69, "salePrice": 3.99, "discount": 15 },
+    { "storeId": "freshthyme", "category": "groceries", "name": "Orange Juice (64oz)", "originalPrice": 4.99, "salePrice": 3.49, "discount": 30 },
+    { "storeId": "walmart", "category": "groceries", "name": "Orange Juice (64oz)", "originalPrice": 4.29, "salePrice": 2.99, "discount": 30 },
+
+    { "storeId": "dollargeneral", "category": "household", "name": "Paper Towels (6pk)", "originalPrice": 5.99, "salePrice": 2.99, "discount": 50 },
+    { "storeId": "walmart", "category": "household", "name": "Paper Towels (6pk)", "originalPrice": 6.49, "salePrice": 3.89, "discount": 40 },
+    { "storeId": "target", "category": "household", "name": "Paper Towels (6pk)", "originalPrice": 6.99, "salePrice": 4.54, "discount": 35 },
+
+    { "storeId": "walmart", "category": "household", "name": "Toilet Paper (12pk)", "originalPrice": 9.99, "salePrice": 6.99, "discount": 30 },
+    { "storeId": "target", "category": "household", "name": "Toilet Paper (12pk)", "originalPrice": 10.99, "salePrice": 7.14, "discount": 35 },
+
+    { "storeId": "dollargeneral", "category": "household", "name": "Dish Soap (28oz)", "originalPrice": 2.99, "salePrice": 2.09, "discount": 30 },
+    { "storeId": "walmart", "category": "household", "name": "Dish Soap (28oz)", "originalPrice": 3.29, "salePrice": 1.97, "discount": 40 },
+
+    { "storeId": "dollargeneral", "category": "household", "name": "Laundry Detergent (64oz)", "originalPrice": 6.99, "salePrice": 5.59, "discount": 20 },
+    { "storeId": "walmart", "category": "household", "name": "Laundry Detergent (64oz)", "originalPrice": 7.99, "salePrice": 4.79, "discount": 40 },
+    { "storeId": "target", "category": "household", "name": "Laundry Detergent (64oz)", "originalPrice": 8.49, "salePrice": 5.94, "discount": 30 },
+
+    { "storeId": "dollargeneral", "category": "household", "name": "Trash Bags (30ct)", "originalPrice": 4.49, "salePrice": 2.69, "discount": 40 },
+    { "storeId": "walmart", "category": "household", "name": "Trash Bags (30ct)", "originalPrice": 4.99, "salePrice": 3.49, "discount": 30 },
+
+    { "storeId": "dollargeneral", "category": "household", "name": "All-Purpose Cleaner", "originalPrice": 3.49, "salePrice": 2.44, "discount": 30 },
+    { "storeId": "walmart", "category": "household", "name": "All-Purpose Cleaner", "originalPrice": 3.99, "salePrice": 2.39, "discount": 40 },
+
+    { "storeId": "dollargeneral", "category": "household", "name": "Sponges (3pk)", "originalPrice": 2.49, "salePrice": 1.49, "discount": 40 },
+    { "storeId": "walmart", "category": "household", "name": "Sponges (3pk)", "originalPrice": 2.99, "salePrice": 1.99, "discount": 33 },
+
+    { "storeId": "walmart", "category": "household", "name": "Aluminum Foil (75ft)", "originalPrice": 4.49, "salePrice": 2.99, "discount": 33 },
+    { "storeId": "target", "category": "household", "name": "Aluminum Foil (75ft)", "originalPrice": 4.99, "salePrice": 3.49, "discount": 30 },
+
+    { "storeId": "walmart", "category": "household", "name": "Plastic Wrap (200ft)", "originalPrice": 3.49, "salePrice": 2.29, "discount": 34 },
+    { "storeId": "dollargeneral", "category": "household", "name": "Plastic Wrap (200ft)", "originalPrice": 2.99, "salePrice": 1.99, "discount": 33 },
+
+    { "storeId": "walmart", "category": "household", "name": "Storage Bags (50ct)", "originalPrice": 4.99, "salePrice": 3.49, "discount": 30 },
+    { "storeId": "target", "category": "household", "name": "Storage Bags (50ct)", "originalPrice": 5.49, "salePrice": 3.57, "discount": 35 },
+
+    { "storeId": "walmart", "category": "household", "name": "Light Bulbs (4pk)", "originalPrice": 5.99, "salePrice": 3.59, "discount": 40 },
+    { "storeId": "target", "category": "household", "name": "Light Bulbs (4pk)", "originalPrice": 6.49, "salePrice": 4.54, "discount": 30 },
+
+    { "storeId": "dollargeneral", "category": "household", "name": "AA Batteries (8pk)", "originalPrice": 4.99, "salePrice": 3.74, "discount": 25 },
+    { "storeId": "walmart", "category": "household", "name": "AA Batteries (8pk)", "originalPrice": 5.49, "salePrice": 3.29, "discount": 40 },
+    { "storeId": "target", "category": "household", "name": "AA Batteries (8pk)", "originalPrice": 5.99, "salePrice": 4.19, "discount": 30 },
+
+    { "storeId": "dollargeneral", "category": "household", "name": "Air Freshener (3pk)", "originalPrice": 3.99, "salePrice": 2.59, "discount": 35 },
+    { "storeId": "walmart", "category": "household", "name": "Air Freshener (3pk)", "originalPrice": 4.49, "salePrice": 2.69, "discount": 40 },
+
+    { "storeId": "dollargeneral", "category": "household", "name": "Glass Cleaner (32oz)", "originalPrice": 3.29, "salePrice": 2.30, "discount": 30 },
+    { "storeId": "walmart", "category": "household", "name": "Glass Cleaner (32oz)", "originalPrice": 3.49, "salePrice": 2.09, "discount": 40 },
+
+    { "storeId": "walmart", "category": "household", "name": "Broom", "originalPrice": 8.99, "salePrice": 5.39, "discount": 40 },
+    { "storeId": "target", "category": "household", "name": "Broom", "originalPrice": 9.99, "salePrice": 6.99, "discount": 30 },
+
+    { "storeId": "walmart", "category": "household", "name": "Dryer Sheets (80ct)", "originalPrice": 4.49, "salePrice": 2.99, "discount": 33 },
+    { "storeId": "target", "category": "household", "name": "Dryer Sheets (80ct)", "originalPrice": 4.99, "salePrice": 3.49, "discount": 30 },
+
+    { "storeId": "walmart", "category": "household", "name": "Paper Plates (100ct)", "originalPrice": 6.99, "salePrice": 4.89, "discount": 30 },
+    { "storeId": "dollargeneral", "category": "household", "name": "Paper Plates (100ct)", "originalPrice": 5.99, "salePrice": 3.59, "discount": 40 },
+
+    { "storeId": "walmart", "category": "household", "name": "Plastic Cups (50ct)", "originalPrice": 4.99, "salePrice": 2.99, "discount": 40 },
+    { "storeId": "dollargeneral", "category": "household", "name": "Plastic Cups (50ct)", "originalPrice": 3.99, "salePrice": 2.79, "discount": 30 },
+
+    { "storeId": "walmart", "category": "household", "name": "Napkins (200ct)", "originalPrice": 3.99, "salePrice": 2.79, "discount": 30 },
+    { "storeId": "target", "category": "household", "name": "Napkins (200ct)", "originalPrice": 4.49, "salePrice": 2.92, "discount": 35 },
+
+    { "storeId": "walmart", "category": "household", "name": "Disinfecting Wipes (75ct)", "originalPrice": 4.99, "salePrice": 3.49, "discount": 30 },
+    { "storeId": "target", "category": "household", "name": "Disinfecting Wipes (75ct)", "originalPrice": 5.49, "salePrice": 3.57, "discount": 35 },
+
+    { "storeId": "walmart", "category": "household", "name": "Fabric Softener (64oz)", "originalPrice": 5.49, "salePrice": 3.84, "discount": 30 },
+    { "storeId": "target", "category": "household", "name": "Fabric Softener (64oz)", "originalPrice": 5.99, "salePrice": 3.89, "discount": 35 },
+
+    { "storeId": "target", "category": "household", "name": "Candles (3pk)", "originalPrice": 14.99, "salePrice": 9.74, "discount": 35 },
+    { "storeId": "walmart", "category": "household", "name": "Candles (3pk)", "originalPrice": 9.99, "salePrice": 6.99, "discount": 30 },
+
+    { "storeId": "target", "category": "household", "name": "Storage Bins (set)", "originalPrice": 22.99, "salePrice": 15.99, "discount": 30 },
+    { "storeId": "walmart", "category": "household", "name": "Storage Bins (set)", "originalPrice": 18.99, "salePrice": 11.39, "discount": 40 },
+
+    { "storeId": "walmart", "category": "household", "name": "Dish Towels (4pk)", "originalPrice": 5.99, "salePrice": 3.59, "discount": 40 },
+    { "storeId": "target", "category": "household", "name": "Dish Towels (4pk)", "originalPrice": 6.99, "salePrice": 4.89, "discount": 30 },
+
+    { "storeId": "dollargeneral", "category": "household", "name": "Garbage Disposal Bags (20ct)", "originalPrice": 3.49, "salePrice": 2.09, "discount": 40 },
+    { "storeId": "walmart", "category": "household", "name": "Garbage Disposal Bags (20ct)", "originalPrice": 3.99, "salePrice": 2.79, "discount": 30 },
+
+    { "storeId": "cvs", "category": "health", "name": "Toothpaste (2pk)", "originalPrice": 7.49, "salePrice": 5.99, "discount": 20 },
+    { "storeId": "walmart", "category": "health", "name": "Toothpaste (2pk)", "originalPrice": 6.49, "salePrice": 3.89, "discount": 40 },
+    { "storeId": "target", "category": "health", "name": "Toothpaste (2pk)", "originalPrice": 6.99, "salePrice": 4.89, "discount": 30 },
+
+    { "storeId": "cvs", "category": "health", "name": "Shampoo (12oz)", "originalPrice": 8.49, "salePrice": 5.94, "discount": 30 },
+    { "storeId": "walmart", "category": "health", "name": "Shampoo (12oz)", "originalPrice": 6.99, "salePrice": 4.89, "discount": 30 },
+    { "storeId": "target", "category": "health", "name": "Shampoo (12oz)", "originalPrice": 7.49, "salePrice": 4.87, "discount": 35 },
+
+    { "storeId": "cvs", "category": "health", "name": "Conditioner (12oz)", "originalPrice": 8.49, "salePrice": 5.94, "discount": 30 },
+    { "storeId": "walmart", "category": "health", "name": "Conditioner (12oz)", "originalPrice": 6.99, "salePrice": 4.54, "discount": 35 },
+
+    { "storeId": "cvs", "category": "health", "name": "Body Wash (18oz)", "originalPrice": 7.99, "salePrice": 5.59, "discount": 30 },
+    { "storeId": "walmart", "category": "health", "name": "Body Wash (18oz)", "originalPrice": 6.49, "salePrice": 3.89, "discount": 40 },
+
+    { "storeId": "cvs", "category": "health", "name": "Deodorant", "originalPrice": 5.99, "salePrice": 4.19, "discount": 30 },
+    { "storeId": "walmart", "category": "health", "name": "Deodorant", "originalPrice": 4.99, "salePrice": 2.99, "discount": 40 },
+    { "storeId": "target", "category": "health", "name": "Deodorant", "originalPrice": 5.49, "salePrice": 3.84, "discount": 30 },
+
+    { "storeId": "cvs", "category": "health", "name": "Sunscreen SPF 50", "originalPrice": 10.99, "salePrice": 8.24, "discount": 25 },
+    { "storeId": "walmart", "category": "health", "name": "Sunscreen SPF 50", "originalPrice": 8.99, "salePrice": 5.39, "discount": 40 },
+
+    { "storeId": "cvs", "category": "health", "name": "Bandages (100ct)", "originalPrice": 6.99, "salePrice": 3.49, "discount": 50 },
+    { "storeId": "walmart", "category": "health", "name": "Bandages (100ct)", "originalPrice": 5.99, "salePrice": 3.59, "discount": 40 },
+
+    { "storeId": "cvs", "category": "health", "name": "Vitamin D (200ct)", "originalPrice": 12.99, "salePrice": 7.79, "discount": 40 },
+    { "storeId": "walmart", "category": "health", "name": "Vitamin D (200ct)", "originalPrice": 9.99, "salePrice": 6.99, "discount": 30 },
+
+    { "storeId": "cvs", "category": "health", "name": "Ibuprofen (100ct)", "originalPrice": 9.99, "salePrice": 6.99, "discount": 30 },
+    { "storeId": "walmart", "category": "health", "name": "Ibuprofen (100ct)", "originalPrice": 7.99, "salePrice": 4.79, "discount": 40 },
+
+    { "storeId": "cvs", "category": "health", "name": "Hand Sanitizer (8oz)", "originalPrice": 4.99, "salePrice": 3.49, "discount": 30 },
+    { "storeId": "dollargeneral", "category": "health", "name": "Hand Sanitizer (8oz)", "originalPrice": 3.49, "salePrice": 2.09, "discount": 40 },
+
+    { "storeId": "cvs", "category": "health", "name": "Lotion (16oz)", "originalPrice": 8.99, "salePrice": 6.29, "discount": 30 },
+    { "storeId": "walmart", "category": "health", "name": "Lotion (16oz)", "originalPrice": 6.99, "salePrice": 4.19, "discount": 40 },
+
+    { "storeId": "cvs", "category": "health", "name": "Razor Cartridges (4pk)", "originalPrice": 14.99, "salePrice": 10.49, "discount": 30 },
+    { "storeId": "walmart", "category": "health", "name": "Razor Cartridges (4pk)", "originalPrice": 12.99, "salePrice": 7.79, "discount": 40 },
+
+    { "storeId": "cvs", "category": "health", "name": "Dental Floss", "originalPrice": 3.99, "salePrice": 2.79, "discount": 30 },
+    { "storeId": "dollargeneral", "category": "health", "name": "Dental Floss", "originalPrice": 2.49, "salePrice": 1.49, "discount": 40 },
+
+    { "storeId": "cvs", "category": "health", "name": "Mouthwash (1L)", "originalPrice": 6.99, "salePrice": 4.89, "discount": 30 },
+    { "storeId": "walmart", "category": "health", "name": "Mouthwash (1L)", "originalPrice": 5.49, "salePrice": 3.29, "discount": 40 },
+
+    { "storeId": "cvs", "category": "health", "name": "Cotton Swabs (500ct)", "originalPrice": 4.49, "salePrice": 3.14, "discount": 30 },
+    { "storeId": "walmart", "category": "health", "name": "Cotton Swabs (500ct)", "originalPrice": 3.49, "salePrice": 2.09, "discount": 40 },
+
+    { "storeId": "cvs", "category": "health", "name": "Facial Tissues (3pk)", "originalPrice": 5.99, "salePrice": 4.19, "discount": 30 },
+    { "storeId": "walmart", "category": "health", "name": "Facial Tissues (3pk)", "originalPrice": 4.99, "salePrice": 2.99, "discount": 40 },
+
+    { "storeId": "cvs", "category": "health", "name": "Cold Medicine (24ct)", "originalPrice": 10.99, "salePrice": 7.69, "discount": 30 },
+    { "storeId": "walmart", "category": "health", "name": "Cold Medicine (24ct)", "originalPrice": 8.99, "salePrice": 5.39, "discount": 40 },
+
+    { "storeId": "cvs", "category": "health", "name": "Allergy Medicine (30ct)", "originalPrice": 12.99, "salePrice": 9.09, "discount": 30 },
+    { "storeId": "walmart", "category": "health", "name": "Allergy Medicine (30ct)", "originalPrice": 9.99, "salePrice": 5.99, "discount": 40 },
+
+    { "storeId": "cvs", "category": "health", "name": "First Aid Kit", "originalPrice": 14.99, "salePrice": 10.49, "discount": 30 },
+    { "storeId": "walmart", "category": "health", "name": "First Aid Kit", "originalPrice": 11.99, "salePrice": 7.19, "discount": 40 },
+
+    { "storeId": "cvs", "category": "health", "name": "Lip Balm (3pk)", "originalPrice": 4.99, "salePrice": 3.49, "discount": 30 },
+    { "storeId": "dollargeneral", "category": "health", "name": "Lip Balm (3pk)", "originalPrice": 3.49, "salePrice": 2.09, "discount": 40 },
+
+    { "storeId": "cvs", "category": "health", "name": "Contact Solution (12oz)", "originalPrice": 9.99, "salePrice": 6.99, "discount": 30 },
+    { "storeId": "walmart", "category": "health", "name": "Contact Solution (12oz)", "originalPrice": 7.99, "salePrice": 4.79, "discount": 40 },
+
+    { "storeId": "cvs", "category": "health", "name": "Multivitamin (90ct)", "originalPrice": 12.99, "salePrice": 9.09, "discount": 30 },
+    { "storeId": "walmart", "category": "health", "name": "Multivitamin (90ct)", "originalPrice": 9.99, "salePrice": 5.99, "discount": 40 },
+    { "storeId": "target", "category": "health", "name": "Multivitamin (90ct)", "originalPrice": 11.49, "salePrice": 7.47, "discount": 35 },
+
+    { "storeId": "cvs", "category": "health", "name": "Hand Soap (3pk)", "originalPrice": 9.99, "salePrice": 6.49, "discount": 35 },
+    { "storeId": "walmart", "category": "health", "name": "Hand Soap (3pk)", "originalPrice": 7.49, "salePrice": 4.49, "discount": 40 },
+
+    { "storeId": "cvs", "category": "health", "name": "Melatonin (60ct)", "originalPrice": 8.99, "salePrice": 6.29, "discount": 30 },
+    { "storeId": "walmart", "category": "health", "name": "Melatonin (60ct)", "originalPrice": 6.99, "salePrice": 4.19, "discount": 40 },
+
+    { "storeId": "cvs", "category": "health", "name": "Floss Picks (75ct)", "originalPrice": 4.49, "salePrice": 3.14, "discount": 30 },
+    { "storeId": "dollargeneral", "category": "health", "name": "Floss Picks (75ct)", "originalPrice": 3.49, "salePrice": 2.09, "discount": 40 },
+
+    { "storeId": "walmart", "category": "snacks", "name": "Bottled Water (24pk)", "originalPrice": 4.99, "salePrice": 2.99, "discount": 40 },
+    { "storeId": "aldi", "category": "snacks", "name": "Bottled Water (24pk)", "originalPrice": 3.99, "salePrice": 2.79, "discount": 30 },
+    { "storeId": "dollargeneral", "category": "snacks", "name": "Bottled Water (24pk)", "originalPrice": 4.49, "salePrice": 2.69, "discount": 40 },
+
+    { "storeId": "walmart", "category": "snacks", "name": "Cola (12pk)", "originalPrice": 6.99, "salePrice": 4.19, "discount": 40 },
+    { "storeId": "payless", "category": "snacks", "name": "Cola (12pk)", "originalPrice": 7.49, "salePrice": 4.87, "discount": 35 },
+
+    { "storeId": "salisbury", "category": "snacks", "name": "Coffee (12oz bag)", "originalPrice": 9.99, "salePrice": 6.99, "discount": 30 },
+    { "storeId": "freshthyme", "category": "snacks", "name": "Coffee (12oz bag)", "originalPrice": 10.49, "salePrice": 6.82, "discount": 35 },
+
+    { "storeId": "aldi", "category": "snacks", "name": "Granola Bars (6pk)", "originalPrice": 2.99, "salePrice": 1.79, "discount": 40 },
+    { "storeId": "walmart", "category": "snacks", "name": "Granola Bars (6pk)", "originalPrice": 3.49, "salePrice": 2.44, "discount": 30 },
+
+    { "storeId": "walmart", "category": "snacks", "name": "Potato Chips (10oz)", "originalPrice": 4.49, "salePrice": 2.69, "discount": 40 },
+    { "storeId": "dollargeneral", "category": "snacks", "name": "Potato Chips (10oz)", "originalPrice": 3.99, "salePrice": 2.79, "discount": 30 },
+
+    { "storeId": "walmart", "category": "snacks", "name": "Pretzels (16oz)", "originalPrice": 3.99, "salePrice": 2.39, "discount": 40 },
+    { "storeId": "aldi", "category": "snacks", "name": "Pretzels (16oz)", "originalPrice": 2.99, "salePrice": 2.09, "discount": 30 },
+
+    { "storeId": "walmart", "category": "snacks", "name": "Crackers (12oz)", "originalPrice": 3.99, "salePrice": 2.79, "discount": 30 },
+    { "storeId": "payless", "category": "snacks", "name": "Crackers (12oz)", "originalPrice": 4.29, "salePrice": 2.57, "discount": 40 },
+
+    { "storeId": "freshthyme", "category": "snacks", "name": "Trail Mix (16oz)", "originalPrice": 6.99, "salePrice": 4.89, "discount": 30 },
+    { "storeId": "walmart", "category": "snacks", "name": "Trail Mix (16oz)", "originalPrice": 5.99, "salePrice": 3.59, "discount": 40 },
+
+    { "storeId": "walmart", "category": "snacks", "name": "Popcorn (3pk)", "originalPrice": 3.99, "salePrice": 2.79, "discount": 30 },
+    { "storeId": "dollargeneral", "category": "snacks", "name": "Popcorn (3pk)", "originalPrice": 3.49, "salePrice": 2.09, "discount": 40 },
+
+    { "storeId": "walmart", "category": "snacks", "name": "Cookies (14oz)", "originalPrice": 4.49, "salePrice": 2.69, "discount": 40 },
+    { "storeId": "payless", "category": "snacks", "name": "Cookies (14oz)", "originalPrice": 4.99, "salePrice": 3.49, "discount": 30 },
+
+    { "storeId": "walmart", "category": "snacks", "name": "Cereal (18oz)", "originalPrice": 4.49, "salePrice": 2.99, "discount": 33 },
+    { "storeId": "payless", "category": "snacks", "name": "Cereal (18oz)", "originalPrice": 4.99, "salePrice": 3.49, "discount": 30 },
+    { "storeId": "aldi", "category": "snacks", "name": "Cereal (18oz)", "originalPrice": 3.49, "salePrice": 2.09, "discount": 40 },
+
+    { "storeId": "freshthyme", "category": "snacks", "name": "Granola (12oz)", "originalPrice": 5.49, "salePrice": 3.29, "discount": 40 },
+    { "storeId": "aldi", "category": "snacks", "name": "Granola (12oz)", "originalPrice": 3.99, "salePrice": 2.79, "discount": 30 },
+
+    { "storeId": "walmart", "category": "snacks", "name": "Energy Drink (4pk)", "originalPrice": 6.99, "salePrice": 4.19, "discount": 40 },
+    { "storeId": "dollargeneral", "category": "snacks", "name": "Energy Drink (4pk)", "originalPrice": 6.49, "salePrice": 4.54, "discount": 30 },
+
+    { "storeId": "walmart", "category": "snacks", "name": "Sports Drink (8pk)", "originalPrice": 7.99, "salePrice": 4.79, "discount": 40 },
+    { "storeId": "payless", "category": "snacks", "name": "Sports Drink (8pk)", "originalPrice": 8.49, "salePrice": 5.94, "discount": 30 },
+
+    { "storeId": "walmart", "category": "snacks", "name": "Sparkling Water (12pk)", "originalPrice": 5.49, "salePrice": 3.29, "discount": 40 },
+    { "storeId": "aldi", "category": "snacks", "name": "Sparkling Water (12pk)", "originalPrice": 4.49, "salePrice": 3.14, "discount": 30 },
+
+    { "storeId": "payless", "category": "snacks", "name": "Apple Juice (64oz)", "originalPrice": 3.99, "salePrice": 2.79, "discount": 30 },
+    { "storeId": "walmart", "category": "snacks", "name": "Apple Juice (64oz)", "originalPrice": 3.79, "salePrice": 2.27, "discount": 40 },
+
+    { "storeId": "payless", "category": "snacks", "name": "Tea Bags (20ct)", "originalPrice": 4.49, "salePrice": 3.14, "discount": 30 },
+    { "storeId": "freshthyme", "category": "snacks", "name": "Tea Bags (20ct)", "originalPrice": 4.99, "salePrice": 2.99, "discount": 40 },
+
+    { "storeId": "walmart", "category": "snacks", "name": "Instant Coffee (8oz)", "originalPrice": 5.99, "salePrice": 3.59, "discount": 40 },
+    { "storeId": "dollargeneral", "category": "snacks", "name": "Instant Coffee (8oz)", "originalPrice": 5.49, "salePrice": 3.84, "discount": 30 },
+
+    { "storeId": "freshthyme", "category": "snacks", "name": "Mixed Nuts (16oz)", "originalPrice": 8.99, "salePrice": 6.29, "discount": 30 },
+    { "storeId": "walmart", "category": "snacks", "name": "Mixed Nuts (16oz)", "originalPrice": 7.99, "salePrice": 4.79, "discount": 40 },
+
+    { "storeId": "walmart", "category": "snacks", "name": "Fruit Snacks (10pk)", "originalPrice": 4.49, "salePrice": 2.69, "discount": 40 },
+    { "storeId": "dollargeneral", "category": "snacks", "name": "Fruit Snacks (10pk)", "originalPrice": 3.99, "salePrice": 2.79, "discount": 30 },
+
+    { "storeId": "freshthyme", "category": "snacks", "name": "Dried Fruit (8oz)", "originalPrice": 5.49, "salePrice": 3.84, "discount": 30 },
+    { "storeId": "aldi", "category": "snacks", "name": "Dried Fruit (8oz)", "originalPrice": 3.99, "salePrice": 2.39, "discount": 40 },
+
+    { "storeId": "walmart", "category": "snacks", "name": "Beef Jerky (3oz)", "originalPrice": 6.99, "salePrice": 4.19, "discount": 40 },
+    { "storeId": "dollargeneral", "category": "snacks", "name": "Beef Jerky (3oz)", "originalPrice": 5.99, "salePrice": 4.19, "discount": 30 },
+
+    { "storeId": "walmart", "category": "snacks", "name": "Hot Cocoa Mix (10ct)", "originalPrice": 3.99, "salePrice": 2.39, "discount": 40 },
+    { "storeId": "dollargeneral", "category": "snacks", "name": "Hot Cocoa Mix (10ct)", "originalPrice": 3.49, "salePrice": 2.44, "discount": 30 },
+
+    { "storeId": "walmart", "category": "snacks", "name": "Lemonade Mix (makes 8qt)", "originalPrice": 3.49, "salePrice": 2.09, "discount": 40 },
+    { "storeId": "dollargeneral", "category": "snacks", "name": "Lemonade Mix (makes 8qt)", "originalPrice": 2.99, "salePrice": 2.09, "discount": 30 },
+
+    { "storeId": "freshthyme", "category": "snacks", "name": "Rice Cakes (8ct)", "originalPrice": 3.99, "salePrice": 2.79, "discount": 30 },
+    { "storeId": "aldi", "category": "snacks", "name": "Rice Cakes (8ct)", "originalPrice": 2.99, "salePrice": 1.79, "discount": 40 }
   ]
 }
