@@ -49,6 +49,48 @@
         { "day": "Saturday", "time": "Closed" },
         { "day": "Sunday", "time": "Closed" }
       ]
+    },
+    {
+      "id": "freshthyme",
+      "name": "Fresh Thyme Market",
+      "type": "Grocery",
+      "url": "https://www.freshthyme.com/"
+    },
+    {
+      "id": "salisbury",
+      "name": "Salisbury Market",
+      "type": "Grocery",
+      "url": "http://purduemarket.us/"
+    },
+    {
+      "id": "aldi",
+      "name": "Aldi",
+      "type": "Grocery",
+      "url": "https://www.aldi.us/"
+    },
+    {
+      "id": "walmart",
+      "name": "Walmart",
+      "type": "General Retail",
+      "url": "https://www.walmart.com/"
+    },
+    {
+      "id": "foodfinders",
+      "name": "Food Finders Food Bank",
+      "type": "Free Resource",
+      "url": "https://www.food-finders.org/",
+      "freeResource": true,
+      "location": "Lafayette, IN",
+      "note": "No item list available. Provides food assistance to individuals and families in need.",
+      "hours": [
+        { "day": "Monday", "time": "8:00 AM - 4:30 PM" },
+        { "day": "Tuesday", "time": "8:00 AM - 4:30 PM" },
+        { "day": "Wednesday", "time": "8:00 AM - 4:30 PM" },
+        { "day": "Thursday", "time": "8:00 AM - 4:30 PM" },
+        { "day": "Friday", "time": "8:00 AM - 4:30 PM" },
+        { "day": "Saturday", "time": "Closed" },
+        { "day": "Sunday", "time": "Closed" }
+      ]
     }
   ],
   "items": [
@@ -85,6 +127,34 @@
     { "storeId": "dollargeneral", "name": "AA Batteries (8pk)", "originalPrice": 4.99, "salePrice": 3.74, "discount": 25 },
     { "storeId": "dollargeneral", "name": "Trash Bags (30ct)", "originalPrice": 4.49, "salePrice": 2.69, "discount": 40 },
     { "storeId": "dollargeneral", "name": "Laundry Detergent", "originalPrice": 6.99, "salePrice": 5.59, "discount": 20 },
-    { "storeId": "dollargeneral", "name": "Air Freshener (3pk)", "originalPrice": 3.99, "salePrice": 2.59, "discount": 35 }
+    { "storeId": "dollargeneral", "name": "Air Freshener (3pk)", "originalPrice": 3.99, "salePrice": 2.59, "discount": 35 },
+
+    { "storeId": "freshthyme", "name": "Organic Bananas (bunch)", "originalPrice": 2.49, "salePrice": 1.49, "discount": 40 },
+    { "storeId": "freshthyme", "name": "Avocados (4ct)", "originalPrice": 5.99, "salePrice": 3.99, "discount": 33 },
+    { "storeId": "freshthyme", "name": "Ground Turkey (1 lb)", "originalPrice": 6.49, "salePrice": 4.54, "discount": 30 },
+    { "storeId": "freshthyme", "name": "Almond Milk (64oz)", "originalPrice": 4.29, "salePrice": 2.99, "discount": 30 },
+    { "storeId": "freshthyme", "name": "Mixed Greens (5oz)", "originalPrice": 3.99, "salePrice": 2.79, "discount": 30 },
+    { "storeId": "freshthyme", "name": "Granola (12oz)", "originalPrice": 5.49, "salePrice": 3.29, "discount": 40 },
+
+    { "storeId": "salisbury", "name": "Deli Turkey (1 lb)", "originalPrice": 8.99, "salePrice": 6.29, "discount": 30 },
+    { "storeId": "salisbury", "name": "Cheddar Cheese Block", "originalPrice": 5.49, "salePrice": 3.84, "discount": 30 },
+    { "storeId": "salisbury", "name": "Fresh Bagels (6ct)", "originalPrice": 4.99, "salePrice": 3.49, "discount": 30 },
+    { "storeId": "salisbury", "name": "Rotisserie Chicken", "originalPrice": 8.99, "salePrice": 5.99, "discount": 33 },
+    { "storeId": "salisbury", "name": "Coffee (12oz bag)", "originalPrice": 9.99, "salePrice": 6.99, "discount": 30 },
+    { "storeId": "salisbury", "name": "Frozen Pizza", "originalPrice": 6.49, "salePrice": 4.54, "discount": 30 },
+
+    { "storeId": "aldi", "name": "Eggs (dozen)", "originalPrice": 3.29, "salePrice": 1.97, "discount": 40 },
+    { "storeId": "aldi", "name": "Sliced Bread", "originalPrice": 1.99, "salePrice": 1.29, "discount": 35 },
+    { "storeId": "aldi", "name": "Pasta (1 lb)", "originalPrice": 1.49, "salePrice": 0.89, "discount": 40 },
+    { "storeId": "aldi", "name": "Marinara Sauce (24oz)", "originalPrice": 2.49, "salePrice": 1.49, "discount": 40 },
+    { "storeId": "aldi", "name": "Frozen Vegetables (12oz)", "originalPrice": 1.79, "salePrice": 1.25, "discount": 30 },
+    { "storeId": "aldi", "name": "Peanut Butter (16oz)", "originalPrice": 2.99, "salePrice": 1.79, "discount": 40 },
+
+    { "storeId": "walmart", "name": "Folding Chair", "originalPrice": 24.99, "salePrice": 14.99, "discount": 40 },
+    { "storeId": "walmart", "name": "T-Shirt (3pk)", "originalPrice": 14.99, "salePrice": 9.99, "discount": 33 },
+    { "storeId": "walmart", "name": "Ground Beef (1 lb)", "originalPrice": 5.99, "salePrice": 3.99, "discount": 33 },
+    { "storeId": "walmart", "name": "Cereal (18oz)", "originalPrice": 4.49, "salePrice": 2.99, "discount": 33 },
+    { "storeId": "walmart", "name": "Backpack", "originalPrice": 19.99, "salePrice": 11.99, "discount": 40 },
+    { "storeId": "walmart", "name": "Paper Plates (100ct)", "originalPrice": 6.99, "salePrice": 4.89, "discount": 30 }
   ]
 }
