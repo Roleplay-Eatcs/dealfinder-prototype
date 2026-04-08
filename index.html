@@ -6,9 +6,9 @@
   <title>DealFinder Purdue</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f2f5; color: #1a1a2e; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f2f5; color: #000000; }
     header {
-      background: #1a1a2e;
+      background: #000000;
       color: #fff;
       padding: 20px 40px;
       display: flex;
@@ -28,7 +28,7 @@
     }
     .container { max-width: 1100px; margin: 0 auto; padding: 30px 20px; }
     .zip-header { margin-bottom: 24px; }
-    .zip-header h2 { font-size: 1.4rem; color: #1a1a2e; }
+    .zip-header h2 { font-size: 1.4rem; color: #000000; }
     .zip-header p { color: #666; font-size: 0.95rem; margin-top: 4px; }
     .active-stores {
       background: #fff;
@@ -58,11 +58,11 @@
       border: 2px solid transparent;
       transition: border-color 0.2s;
     }
-    .store-list-item:hover { border-color: #e94560; }
-    .store-list-item.selected { border-color: #e94560; }
+    .store-list-item:hover { border-color: #CFB991; }
+    .store-list-item.selected { border-color: #CFB991; }
     .store-list-item .name { font-weight: 600; font-size: 0.95rem; }
     .store-list-item .type { font-size: 0.8rem; color: #888; }
-    .store-list-item .count { font-size: 0.8rem; color: #e94560; margin-top: 2px; }
+    .store-list-item .count { font-size: 0.95rem; color: #CFB991; margin-top: 2px; }
     .store-list-item .free-tag { color: #2ecc71; font-weight: 600; }
 
     .item-search {
@@ -78,7 +78,7 @@
       outline: none;
       transition: border-color 0.2s;
     }
-    .item-search input:focus { border-color: #e94560; }
+    .item-search input:focus { border-color: #CFB991; }
     .search-results {
       margin-bottom: 30px;
     }
@@ -153,12 +153,12 @@
     .sale-item .sale-price {
       font-size: 1.1rem;
       font-weight: 700;
-      color: #e94560;
+      color: #CFB991;
     }
     .sale-item .discount {
       font-size: 0.75rem;
-      background: #e94560;
-      color: #fff;
+      background: #CFB991;
+      color: #000;
       padding: 2px 6px;
       border-radius: 4px;
       align-self: flex-start;
@@ -179,16 +179,16 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      border: 2px solid #1a1a2e;
+      border: 2px solid #000000;
       background: #fff;
       font-size: 1.2rem;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #1a1a2e;
+      color: #000000;
     }
-    .carousel-btn:hover { background: #1a1a2e; color: #fff; }
+    .carousel-btn:hover { background: #CFB991; color: #000; }
     .carousel-dots { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
     .dot {
       width: 10px;
@@ -197,7 +197,7 @@
       background: #ccc;
       cursor: pointer;
     }
-    .dot.active { background: #e94560; }
+    .dot.active { background: #CFB991; }
     .free-banner {
       display: inline-block;
       background: #2ecc71;
