@@ -538,6 +538,7 @@
       var matches = data.items.filter(function(item) {
         return item.name.toLowerCase().indexOf(lowerQuery) !== -1;
       });
+      matches.sort(function(a, b) { return a.salePrice - b.salePrice; });
 
       resultsEl.style.display = '';
       browseEl.style.display = 'none';
