@@ -100,11 +100,15 @@
   "items": [
     { "storeId": "payless", "category": "groceries", "name": "Whole Milk (1 gal)", "originalPrice": 4.29, "salePrice": 2.99, "discount": 30 },
     { "storeId": "aldi", "category": "groceries", "name": "Whole Milk (1 gal)", "originalPrice": 3.79, "salePrice": 2.49, "discount": 34 },
-    { "storeId": "walmart", "category": "groceries", "name": "Whole Milk (1 gal)", "originalPrice": 3.99, "salePrice": 2.79, "discount": 30 },
+    { "storeId": "walmart", "category": "groceries", "name": "Whole Milk (1 gal)", "originalPrice": 2.49, "salePrice": 2.30, "discount": 8 },
+    { "storeId": "target", "category": "groceries", "name": "Whole Milk (1 gal)", "originalPrice": 2.59, "salePrice": 2.39, "discount": 8 },
+    { "storeId": "dollargeneral", "category": "groceries", "name": "Whole Milk (1 gal)", "originalPrice": 4.25, "salePrice": 3.95, "discount": 7 },
 
     { "storeId": "payless", "category": "groceries", "name": "Large Eggs (dozen)", "originalPrice": 3.49, "salePrice": 2.49, "discount": 29 },
-    { "storeId": "aldi", "category": "groceries", "name": "Large Eggs (dozen)", "originalPrice": 3.29, "salePrice": 1.97, "discount": 40 },
-    { "storeId": "walmart", "category": "groceries", "name": "Large Eggs (dozen)", "originalPrice": 3.59, "salePrice": 2.69, "discount": 25 },
+    { "storeId": "aldi", "category": "groceries", "name": "Large Eggs (dozen)", "originalPrice": 2.29, "salePrice": 1.85, "discount": 19 },
+    { "storeId": "walmart", "category": "groceries", "name": "Large Eggs (dozen)", "originalPrice": 2.09, "salePrice": 1.67, "discount": 20 },
+    { "storeId": "target", "category": "groceries", "name": "Large Eggs (dozen)", "originalPrice": 2.19, "salePrice": 1.79, "discount": 18 },
+    { "storeId": "dollargeneral", "category": "groceries", "name": "Large Eggs (dozen)", "originalPrice": 2.59, "salePrice": 2.15, "discount": 17 },
 
     { "storeId": "payless", "category": "groceries", "name": "Chicken Breast (lb)", "originalPrice": 5.99, "salePrice": 4.49, "discount": 25 },
     { "storeId": "freshthyme", "category": "groceries", "name": "Chicken Breast (lb)", "originalPrice": 6.49, "salePrice": 4.54, "discount": 30 },
@@ -201,8 +205,9 @@
     { "storeId": "dollargeneral", "category": "household", "name": "All-Purpose Cleaner", "originalPrice": 3.49, "salePrice": 2.44, "discount": 30 },
     { "storeId": "walmart", "category": "household", "name": "All-Purpose Cleaner", "originalPrice": 3.99, "salePrice": 2.39, "discount": 40 },
 
-    { "storeId": "dollargeneral", "category": "household", "name": "Sponges (3pk)", "originalPrice": 2.49, "salePrice": 1.49, "discount": 40 },
-    { "storeId": "walmart", "category": "household", "name": "Sponges (3pk)", "originalPrice": 2.99, "salePrice": 1.99, "discount": 33 },
+    { "storeId": "dollargeneral", "category": "household", "name": "Sponges (4pk)", "originalPrice": 5.99, "salePrice": 5.00, "discount": 17 },
+    { "storeId": "walmart", "category": "household", "name": "Sponges (4pk)", "originalPrice": 3.99, "salePrice": 3.32, "discount": 17 },
+    { "storeId": "target", "category": "household", "name": "Sponges (4pk)", "originalPrice": 5.99, "salePrice": 4.99, "discount": 17 },
 
     { "storeId": "walmart", "category": "household", "name": "Aluminum Foil (75ft)", "originalPrice": 4.49, "salePrice": 2.99, "discount": 33 },
     { "storeId": "target", "category": "household", "name": "Aluminum Foil (75ft)", "originalPrice": 4.99, "salePrice": 3.49, "discount": 30 },
@@ -344,6 +349,11 @@
 
     { "storeId": "walmart", "category": "snacks", "name": "Cola (12pk)", "originalPrice": 6.99, "salePrice": 4.19, "discount": 40 },
     { "storeId": "payless", "category": "snacks", "name": "Cola (12pk)", "originalPrice": 7.49, "salePrice": 4.87, "discount": 35 },
+
+    { "storeId": "dollargeneral", "category": "snacks", "name": "Coke (12pk)", "originalPrice": 10.49, "salePrice": 9.00, "discount": 14 },
+    { "storeId": "walmart", "category": "snacks", "name": "Coke (12pk)", "originalPrice": 10.98, "salePrice": 8.42, "discount": 23 },
+    { "storeId": "target", "category": "snacks", "name": "Coke (12pk)", "originalPrice": 10.99, "salePrice": 8.89, "discount": 19 },
+    { "storeId": "aldi", "category": "snacks", "name": "Coke (12pk)", "originalPrice": 10.49, "salePrice": 9.29, "discount": 11 },
 
     { "storeId": "salisbury", "category": "snacks", "name": "Coffee (12oz bag)", "originalPrice": 9.99, "salePrice": 6.99, "discount": 30 },
     { "storeId": "freshthyme", "category": "snacks", "name": "Coffee (12oz bag)", "originalPrice": 10.49, "salePrice": 6.82, "discount": 35 },
